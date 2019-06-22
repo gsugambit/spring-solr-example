@@ -3,6 +3,9 @@
 ## Install Docker and Docker Compose via docker official website
 None of the below will work until you complete this step. 
 
+## First Create docker image for the spring-solar-example app
+Run the following command inside the repo folder: `mvn clean package docker:build`
+
 ## Grab config files for solr server
 
 Run the following commands while inside git folder to place files in same directory as docker-compose file
