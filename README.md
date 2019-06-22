@@ -30,3 +30,10 @@ http://localhost:8983/solr/#/ <-- to see the solr UI
 
 http://localhost:8984/employee/random <-- to generate a random amount of employees in the database. 
 Generates [75000,17500) at a time
+
+# To Stop the application
+From within the repo folder run the following commands
+
+docker-compose stop -t 0
+
+docker-compose rm -vfa
