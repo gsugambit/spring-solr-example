@@ -24,5 +24,6 @@ Now you have the folder myconf locally
 ## Now launch the application after the images download and the app starts
 
 http://localhost:8983/solr/#/ <-- to see the solr UI
+
 http://localhost:8984/employee/random <-- to generate a random amount of employees in the database. 
 Generates [75000,17500) at a time
