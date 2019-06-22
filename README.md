@@ -34,6 +34,6 @@ Generates [75000,17500) at a time
 # To Stop the application
 From within the repo folder run the following commands
 
-docker-compose stop -t 0
+`docker-compose stop -t 0`
 
-docker-compose rm -vfa
+`docker-compose rm -vfa`
