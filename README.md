@@ -1,6 +1,7 @@
 # Steps To Build, Run, Test
 
 ## Install Docker and Docker Compose via docker official website
+None of the below will work until you complete this step. 
 
 ## Grab config files for solr server
 
@@ -13,7 +14,7 @@ This will take the default files from the docker image and place them in a local
 
 Now you have the folder myconf locally
 
-## Create the mycores folder <-- this folder will be empty for now but in the future will have contents
+### Create the mycores folder <-- this folder will be empty for now but in the future will have contents
 
 ## Now you are ready to run the server and spring boot app.
 
