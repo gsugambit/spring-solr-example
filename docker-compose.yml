@@ -1,0 +1,30 @@
+version: '3'
+services:
+  solr:
+    image: solr
+    hostname: solr
+    restart: always
+    volumes:
+      - ./mycores:/opt/solr/server/solr/mycores
+      - ./myconf:/opt/solr/server/solr/configsets/myconf
+    ports:
+      - 8983:8983
+    environment:
+      JAVA_OPTS: "-Xms64m -Xmx128m -XX:PermSize=32m -XX:MaxPermSize=64m -XX:+UseG1GC"
+    entrypoint:
+      - solr-precreate
+      - employee
+      - /opt/solr/server/solr/configsets/myconf
+
+  spring-solr:
+    image: spring-solr
+    hostname: spring-solr
+    restart: always
+    ports:
+      - 8984:8080
+    links:
+      - solr
+    environment:
+      JAVA_OPTS: "-Xms64m -Xmx128m -XX:PermSize=32m -XX:MaxPermSize=64m -XX:+UseG1GC"
+      SPRING_DATA_SOLR_HOST: http://solr:8983/solr
+
